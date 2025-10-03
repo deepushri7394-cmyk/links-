@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check Out These Amazing Links!</title>
+<style>
+  * {margin:0; padding:0; box-sizing:border-box;}
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .link-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .link-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  }
+  .link-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .link-card-content {
+    padding: 20px;
+    text-align: center;
+  }
+  .link-card-content h3 {margin-bottom: 10px; font-size: 1.2rem; color: #333;}
+  .link-card-content p {font-size: 0.95rem; color: #666; margin-bottom: 15px;}
+  .link-card-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .link-card-content a:hover {background: #0056b3;}
+  .click-count {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #333;
+  }
+  @media (max-width:768px){.link-card img {height:150px;}}
+  @media (max-width:480px){
+    .link-card img {height:120px;}
+    .link-card-content h3 {font-size:1rem;}
+    .link-card-content p {font-size:0.85rem;}
+  }
+</style>
+<style>
+  * {margin:0; padding:0; box-sizing:border-box;}
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .link-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+  .link-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  }
+  .link-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .link-card-content {
+    padding: 20px;
+    text-align: center;
+  }
+  .link-card-content h3 {margin-bottom: 10px; font-size: 1.2rem; color: #333;}
+  .link-card-content p {font-size: 0.95rem; color: #666; margin-bottom: 15px;}
+  .link-card-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .link-card-content a:hover {background: #0056b3;}
+
+  /* Click counter badge */
+  .click-count {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.9rem;
+    background: #ff6b6b;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.2s;
+  }
+  .click-count.bump {
+    transform: scale(1.2);
+  }
+
+  @media (max-width:768px){.link-card img {height:150px;}}
+  @media (max-width:480px){
+    .link-card img {height:120px;}
+    .link-card-content h3 {font-size:1rem;}
+    .link-card-content p {font-size:0.85rem;}
+    .click-count {font-size:0.8rem; padding:5px 10px;}
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="link-card" data-key="link1">
+    <img src="https://source.unsplash.com/400x200/?technology" alt="Link 1">
+    <div class="link-card-content">
+      <h3>Discover Amazing Tech</h3>
+      <p>Explore the latest gadgets and innovations with just one click!</p>
+      <a href="https://shrinkme.top/64X0lX" target="_blank" onclick="incrementCount('link1')">Open Link</a>
+      <div class="click-count" id="count-link1">Opened 0 times</div>
+    </div>
+  </div>
+
+  <div class="link-card" data-key="link2">
+    <img src="https://source.unsplash.com/400x200/?nature" alt="Link 2">
+    <div class="link-card-content">
+      <h3>Nature Wonders</h3>
+      <p>See breathtaking landscapes and hidden gems around the world.</p>
+      <a href="https://shrinkme.top/6K7L7TRa" target="_blank" onclick="incrementCount('link2')">Open Link</a>
+      <div class="click-count" id="count-link2">Opened 0 times</div>
+    </div>
+  </div>
+
+  <div class="link-card" data-key="link3">
+    <img src="https://source.unsplash.com/400x200/?travel" alt="Link 3">
+    <div class="link-card-content">
+      <h3>Travel Adventures</h3>
+      <p>Plan your next vacation and discover exotic destinations easily.</p>
+      <a href="https://shrinkme.top/q7W1v7" target="_blank" onclick="incrementCount('link3')">Open Link</a>
+      <div class="click-count" id="count-link3">Opened 0 times</div>
+    </div>
+  </div>
+
+  <div class="link-card" data-key="link4">
+    <img src="https://source.unsplash.com/400x200/?food" alt="Link 4">
+    <div class="link-card-content">
+      <h3>Delicious Recipes</h3>
+      <p>Try new culinary delights and mouth-watering dishes today!</p>
+      <a href="https://shrinkme.top/YG48W" target="_blank" onclick="incrementCount('link4')">Open Link</a>
+      <div class="click-count" id="count-link4">Opened 0 times</div>
+    </div>
+  </div>
+
+  <div class="link-card" data-key="link5">
+    <img src="https://source.unsplash.com/400x200/?fashion" alt="Link 5">
+    <div class="link-card-content">
+      <h3>Fashion Trends</h3>
+      <p>Stay updated with the latest clothing and style inspiration.</p>
+      <a href="https://shrinkme.top/VzaiSUEo" target="_blank" onclick="incrementCount('link5')">Open Link</a>
+      <div class="click-count" id="count-link5">Opened 0 times</div>
+    </div>
+  </div>
+
+  <div class="link-card" data-key="link6">
+    <img src="https://source.unsplash.com/400x200/?fitness" alt="Link 6">
+    <div class="link-card-content">
+      <h3>Fitness Tips</h3>
+      <p>Get motivated and maintain a healthy lifestyle effortlessly.</p>
+      <a href="https://shrinkme.top/nZpC4VK" target="_blank" onclick="incrementCount('link6')">Open Link</a>
+      <div class="click-count" id="count-link6">Opened 0 times</div>
+    </div>
+  </div>
+
+  <div class="link-card" data-key="link7">
+    <img src="https://source.unsplash.com/400x200/?art" alt="Link 7">
+    <div class="link-card-content">
+      <h3>Art & Creativity</h3>
+      <p>Unleash your inner artist and explore creative ideas online.</p>
+      <a href="https://shrinkme.top/YXt7Rib" target="_blank" onclick="incrementCount('link7')">Open Link</a>
+      <div class="click-count" id="count-link7">Opened 0 times</div>
+    </div>
+  </div>
+
+  <div class="link-card" data-key="link8">
+    <img src="https://source.unsplash.com/400x200/?gaming" alt="Link 8">
+    <div class="link-card-content">
+      <h3>Gaming World</h3>
+      <p>Discover trending games and join the excitement now!</p>
+      <a href="https://shrinkme.top/VMOihJSo" target="_blank" onclick="incrementCount('link8')">Open Link</a>
+      <div class="click-count" id="count-link8">Opened 0 times</div>
+    </div>
+  </div>
+
+  <div class="link-card" data-key="link9">
+    <img src="https://source.unsplash.com/400x200/?movies" alt="Link 9">
+    <div class="link-card-content">
+      <h3>Movie Buzz</h3>
+      <p>Catch up on latest movies, trailers, and cinematic trends.</p>
+      <a href="https://shrinkme.top/d0z3b6" target="_blank" onclick="incrementCount('link9')">Open Link</a>
+      <div class="click-count" id="count-link9">Opened 0 times</div>
+    </div>
+  </div>
+
+  <div class="link-card" data-key="link10">
+    <img src="https://source.unsplash.com/400x200/?education" alt="Link 10">
+    <div class="link-card-content">
+      <h3>Learn & Grow</h3>
+      <p>Enhance your skills with tutorials, guides, and resources.</p>
+      <a href="https://shrinkme.top/QB8SNx" target="_blank" onclick="incrementCount('link10')">Open Link</a>
+      <div class="click-count" id="count-link10">Opened 0 times</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Initialize counts from localStorage
+  for(let i=1;i<=10;i++){
+    let key = 'link'+i;
+    let count = localStorage.getItem(key) || 0;
+    document.getElementById('count-'+key).innerText = 'Opened ' + count + ' times';
+  }
+
+  function incrementCount(key){
+    let count = localStorage.getItem(key) || 0;
+    count = parseInt(count) + 1;
+    localStorage.setItem(key, count);
+    document.getElementById('count-'+key).innerText = 'Opened ' + count + ' times';
+  }
+</script>
+<script>
+  // Initialize counts from localStorage
+  for(let i=1;i<=10;i++){
+    let key = 'link'+i;
+    let count = localStorage.getItem(key) || 0;
+    let counterEl = document.getElementById('count-'+key);
+    if(counterEl) counterEl.innerText = 'Opened ' + count + ' times';
+  }
+
+  function incrementCount(key){
+    let count = localStorage.getItem(key) || 0;
+    count = parseInt(count) + 1;
+    localStorage.setItem(key, count);
+
+    let counterEl = document.getElementById('count-'+key);
+    if(counterEl){
+      counterEl.innerText = 'Opened ' + count + ' times';
+      counterEl.classList.add('bump');
+      setTimeout(()=>{counterEl.classList.remove('bump');},200);
+    }
+  }
+</script>
+
+</body>
+</html>
